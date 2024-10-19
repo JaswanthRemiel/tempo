@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Guardent</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Guardent</h1>
+    <form id="preferencesForm">
+      <div class="option">
+        <label>
+          <input type="checkbox" id="autoCategorization" name="autoCategorization"> Enable Auto-Categorization
+        </label>
+      </div>
+
+      <div class="profiles">
+        <h2>Profiles</h2>
+        <div id="profileList">
+        </div>
+        <br>
+        <div class="new-profile">
+          <input type="text" id="newProfileName" placeholder="Add new profile">
+          <button type="button" id="addProfileButton">Add</button>
+        </div>
+      </div>
+      <div class="categories">
+        <h2>Categories to Hide</h2>
+        <div class="category">
+          <label>
+            <input type="checkbox" name="categories" value="News"> News
+          </label>
+        </div>
+        <div class="category">
+          <label>
+            <input type="checkbox" name="categories" value="Sports"> Sports
+          </label>
+        </div>
+        <div class="category">
+          <label>
+            <input type="checkbox" name="categories" value="Entertainment"> Entertainment
+          </label>
+        </div>
+      </div>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

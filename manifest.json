@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Guardent",
+  "version": "1.0",
+  "description": "Customize your browsing experience by filtering out irrelevant data based on preferences.",
+  "permissions": [
+    "contextMenus",
+    "history",
+    "bookmarks",
+    "downloads",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  }
+}
